@@ -14,7 +14,7 @@ Sub Dev_MakeDevDoc()
     ws.Cells(r, 1) = "モジュール名"
     ws.Cells(r, 2) = "プロシージャ名"
     ws.Cells(r, 3) = "コメント1行目"
-    ws.Cells(r, 4) = "宣言文全体"
+    ws.Cells(r, 4) = "宣言部全体"
     ws.Cells(r, 5) = "コメント全体"
     Range(ws.Cells(r, 1), ws.Cells(r, lastCol)).Interior.Color = rgbMidnightBlue
     Range(ws.Cells(r, 1), ws.Cells(r, lastCol)).Font.Color = rgbWhite
