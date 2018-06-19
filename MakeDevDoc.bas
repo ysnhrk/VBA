@@ -57,11 +57,9 @@ Sub Dev_MakeDevDoc()
                 '新しいプロシージャに入ったら
                 If procName <> .ProcOfLine(lp_line, 0) Then
                     
-                    'プロシージャ名の設定
+                    'プロシージャ名
                     procName = .ProcOfLine(lp_line, 0)
                     r = r + 1
-                    
-                    'プロシージャ名
                     ws.Cells(r, 2) = procName
                      
                     'コメント
@@ -73,7 +71,7 @@ Sub Dev_MakeDevDoc()
                         ws.Cells(r, 5) = .Lines(lp_line, commentLineCount)  'コメント全体
                     End If
                     
-                    '関数の宣言
+                    '関数の宣言部
                     Dim str: str = ""
                     Dim k: k = 0
                     Do
@@ -100,6 +98,6 @@ Sub Dev_MakeDevDoc()
     Columns(5).ColumnWidth = 12
     Rows.AutoFit
   
-  MsgBox ws.name & "にプロシージャ一覧を作成しました。"
+    MsgBox ws.name & "にプロシージャ一覧を作成しました。"
 
 End Sub
